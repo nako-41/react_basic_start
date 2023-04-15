@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+//import Headers from './components/Header';
+//import React from 'react';
+//import Navi from './components/Navi';
+import Categories from './components/Categories';
+import Products from './components/Products';
+import { Container, Row,Col } from 'reactstrap';
+// import Deneme from './components/Deneme';
+// const name="okan";
+// const surname="kaipoglu";
+// const isloggedIn=false;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+
+// return React.createElement("div",null,"hello")
+  return(
+    <>
+    <Container>
+      <Row>
+        <Col xs="6">
+        <Categories/>
+        </Col>
+        <Col xs="6">
+        <Products/>
+        </Col>
+      </Row>
+      {/* <Row>
+      <Col xs="6">
+
+        </Col>
+      </Row> */}
+    </Container>
+
+     {/* <h1> {isloggedIn ? `"Benim adim":${name} ${surname} `: "oturum acilamadi"} </h1> */}
+
+    </>
+  )
 }
-
 export default App;
